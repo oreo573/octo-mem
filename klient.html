@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Wideo On Demand</title>
+    <link rel="stylesheet" href="styl3.css">
+</head>
+<body>
+    <div id="zegar">
+
+        <script type="text/javascript">
+        
+        //utworzenie funkcji o nazwie czas
+        function czas() {
+        var data = new Date(); //tworzymy obiekt typu data
+        var godzina = data.getHours(); //pobieramy godzinę
+        var minuta = data.getMinutes(); //pobieramy minutę
+        var sekunda = data.getSeconds(); //pobieramy sekundy
+        
+        // przypisanie zera do godziny, minuty i sekundy, czyli np. 05 a nie 5
+        if (godzina < 10) {
+        godzina = "0" + godzina;
+        }
+        if (minuta < 10) {
+       minuta = "0" + minuta;
+        }
+        if (sekunda < 10) {
+        sekunda = "0" + sekunda;
+        }
+        
+        //wyświetlenie zegarka w divie o id zegar
+        document.querySelector("#zegar").innerHTML = "Pora na nowe auto: " + godzina + " : " + minuta + " : " + sekunda;
+        
+        setTimeout(czas, 1000); //samowywołanie się funkcji po 1s
+        }
+        window.addEventListener("load", czas); //wywołanie funkcji czas po załadowaniu strony
+        </script>
+        </div>
+           <div id="baner1">
+               <h1>Salon samochodowy</h1>
+           </div>
+           <div id="baner2">
+           <img src="logo1.jpg" alt="" width="200px" height="73px">
+           </div>
+           <div id="polecamy">
+               <center><b>
+               <h3><a href="salonn.html">Strona główna</a>
+               <a href="klient.html">Klienci</a>
+               <a href="Katalog.html">Katalog samochodowy</a>
+               
+               </h3>
+        </center></b>
+       <center>
+            <h4>Podaj dane:</h4>
+            <form action="" method="get">
+
+                Imię: <br>
+                <input type="text"> <br>
+                Naziwsko:<br>
+                <input type="text"> <br>
+                Adres: <br>
+                <input type="text"> <br>
+                NIP:<br>
+                 <input type="number" name="NIP" id="NIP"> <br>
+                Telefon:<br>
+                 <input type="number" name="numer" id="numer"><br>
+                E-mail: <br>
+                 <input type="email" name="mail" id="mail"><br>
+                Pessel:<br>
+                 <input type="number" name="PES" id="PES"><br>
+                Nr dowodu osobistego: <br>
+                <input type="number" name="dow" id="dow"><br>
+                <input type="button" value="wyślij">
+            </form>
+            
+</center>
+  
+       </div>
+       <div id="filmfantastyczny">
+           
+      
+           <h3>Kontakt:</h3>
+           
+        
+    
+      
+    
+    
+    
+    
+           
+           
+            <p>
+           
+                <b>Telefon: </b> <a href="tel:+48579341217">579341217</a><br>
+                 <b>E-mail:</b>  <a href="mailto:ja@poczta.com">kliknj by wysłać wiadomość</a></p>
+                 <b>Adres:</b>  ul. Gen. K. Sosnkowskiego 43, 05-300 Mińsk Mazowiecki<br>
+                 <b>Wykonał:</b> Bartosz Płoszaj <br>
+                 <b><a href="linki.txt">plik z linkami do zdjeć</a></b>
+       </div>
+    
+    </body>
+    </html>
+       
+   </div>
+ 
+
+</body>
+</html>
